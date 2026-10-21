@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export function WaveCanvas() {
+export function WaveCanvas({ className = "" }: { className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
