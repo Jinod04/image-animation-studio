@@ -64,5 +64,5 @@ export function WaveCanvas({ className = "" }: { className?: string }) {
     return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
   }, []);
 
-  return <canvas ref={ref} className="absolute inset-0 h-full w-full" aria-hidden />;
+  return <canvas ref={ref} className={`absolute inset-0 h-full w-full ${className}`} aria-hidden />;
 }
