@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export function WaveCanvas() {
+export function WaveCanvas({ className = "" }: { className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -64,5 +64,5 @@ export function WaveCanvas() {
     return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
   }, []);
 
-  return <canvas ref={ref} className="absolute inset-0 h-full w-full" aria-hidden />;
+  return <canvas ref={ref} className={`absolute inset-0 h-full w-full ${className}`} aria-hidden />;
 }
