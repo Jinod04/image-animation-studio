@@ -30,7 +30,7 @@ export function WaveCanvas() {
       const base = h * (1.05 - t * 1.0);
       const wave = Math.sin(t * 5 + time * 0.6 + k * 2) * h * 0.06;
       const twist = Math.cos(t * 3.2 - time * 0.4 + k * 4) * spread * k * 2.2;
-      return [x, base + wave + twist + k * h * 0.15 * t];
+      return [x, base + wave + twist + k * h * 0.15 * t] as [number, number];
     };
 
     const draw = (ms: number) => {
