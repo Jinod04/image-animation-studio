@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { WaveCanvas } from "@/components/WaveCanvas";
-import heroBg from "@/assets/hero-bg.png";
+import { HeroBackground } from "@/components/HeroBackground";
 
 export const Route = createFileRoute("/")({
   head: () => ({
