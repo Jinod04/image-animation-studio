@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { WaveCanvas } from "@/components/WaveCanvas";
-import heroBg from "@/assets/hero-bg.png";
+import { HeroBackground } from "@/components/HeroBackground";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,8 +19,7 @@ const nav = ["Home", "About", "Products & Services", "Careers"];
 function Index() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      <img src={heroBg} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
-      <WaveCanvas className="opacity-70" />
+      <HeroBackground />
       <div className="pointer-events-none absolute inset-0 bg-[image:var(--hero-fade)]" />
       <header className="relative z-10 flex items-center justify-between px-8 py-8 md:px-16">
         <span className="text-2xl font-extrabold tracking-tight"><span className="text-primary">E</span>VOKE</span>
